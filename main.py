@@ -15,6 +15,7 @@ def if_file_exists():
     file_flag = "a" if os.path.isfile("myLog.txt") else "w"
     return file_flag
 
+
 def create_log_message(data):
     album_name = "Album name: " + data["item"]["album"]["name"]
     artist_name = "Artist name: " + data["item"]["artists"][0]["name"]
@@ -27,12 +28,12 @@ def create_log_message(data):
 
 
 def write_log(results, flag, debug=False):
-        # Open the file in append mode ('a')
+    # Open the file in append mode ('a')
     with open('myLog.txt', flag, encoding='utf-8') as file:
-            # Write some text to the file
+        # Write some text to the file
         file.write(results + "\n")
     if debug is True:
-            print("Debug print: " + results)
+        print("Debug print: " + results)
 
 
 def main():
