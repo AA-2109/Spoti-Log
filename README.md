@@ -5,7 +5,8 @@ This Python script uses the Spotify Web API to log the currently playing track a
 ## Dependencies
 
 The script uses the following  external Python libraries:
-- `spotipy`
+
+1. [Spotipy](https://github.com/spotipy-dev/spotipy)
 
 You can install these using pip:
 ```bash
@@ -29,3 +30,5 @@ The script will start logging the currently playing track and its details to a f
 The script uses the spotipy library to authenticate with the Spotify Web API and get the currently playing track. 
 It then logs the track name, artist name, album name and links to the track and album to myLog.txt.
 If no track is currently playing, the script will log a “Finished” message and exit.
+
+

@@ -3,8 +3,6 @@ from spotipy.oauth2 import SpotifyOAuth
 import time
 import os
 
-import app_creds
-
 scope = "user-read-currently-playing, user-read-playback-state"
 client_ID = 'your_client_id'
 client_secret = 'your_client_secret'
@@ -38,7 +36,7 @@ def write_log(results, flag, debug=False):
 
 def main():
     sp = spotipy.Spotify(
-        auth_manager=SpotifyOAuth(client_id=app_creds.client_ID, client_secret=app_creds.client_secret, scope=scope,
+        auth_manager=SpotifyOAuth(client_id=client_ID, client_secret=client_secret, scope=scope,
                                   redirect_uri=redirect_uri))
     flag = if_file_exists()
     while True:
