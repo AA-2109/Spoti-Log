@@ -42,7 +42,7 @@ def main():
     while True:
         data = sp.currently_playing()
         if data is None:
-            write_log("Finished at " + time.ctime(time.time()))
+            write_log("Finished at " + time.ctime(time.time()), flag)
             print("Not playing right now, exiting")
             return
         current_position = data["progress_ms"]
